@@ -1,0 +1,62 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "kicker": "ODININ EVENTS",
+    "title": "Events",
+    "accent": "that turn introductions into opportunities",
+    "lead": "B2B events in London, and the right fairs across the UK and Europe."
+  },
+  "sections": {
+    "forums": {
+      "title": "Trust is built in the same room",
+      "subtitle": "Digital presence opens doors. Events close them."
+    },
+    "meetings": {
+      "title": "B2B meetings",
+      "subtitle": "Clients meet UK customers one to one. Every round, customers move to the next table."
+    },
+    "deliver": {
+      "title": "We handle everything",
+      "subtitle": "Tick each step and watch your London event come together."
+    },
+    "who": {
+      "title": "Who it is for",
+      "subtitle": "Pick the one that sounds like you."
+    },
+    "upcoming": {
+      "title": "Upcoming events",
+      "subtitle": "Regular B2B trade and networking events in London, all year.",
+      "band": {
+        "title": "Join the next one",
+        "text": "Ask about upcoming events, or a bespoke event designed around your goals."
+      }
+    },
+    "process": {
+      "title": "How it works",
+      "subtitle": "We work back from the date.",
+      "steps": [
+        {
+          "when": "8 weeks out",
+          "title": "Plan",
+          "text": "Format, venue, date and guest list."
+        },
+        {
+          "when": "6 weeks out",
+          "title": "Invite",
+          "text": "Target buyers invited and confirmed."
+        },
+        {
+          "when": "Event day",
+          "title": "Host",
+          "text": "We run the day. You meet buyers."
+        },
+        {
+          "when": "Day after",
+          "title": "Follow up",
+          "text": "Notes, introductions and next steps."
+        }
+      ]
+    }
+  }
+}

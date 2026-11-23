@@ -1,0 +1,35 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "title": "Grow Smarter",
+    "accent": "with Odinin",
+    "lead": "A London sales and marketing consultancy. We help small and growing brands win in the UK with strategy, data and AI."
+  },
+  "sections": {
+    "about": {
+      "title": "Growth partner, not an agency",
+      "subtitle": "Results, not activity. Slide, tap and see."
+    },
+    "brand": {
+      "title": "Brand",
+      "subtitle": "From a local name to a brand UK buyers trust."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "subtitle": "Content and campaigns that reach the people who sign orders."
+    },
+    "meetings": {
+      "title": "B2B Meetings",
+      "subtitle": "Matched with the right UK buyers. Booked into your week."
+    },
+    "events": {
+      "title": "Events",
+      "subtitle": "Roundtables, trade fairs and launch nights."
+    },
+    "growth": {
+      "title": "Business Development",
+      "subtitle": "Research, partners and first orders, run on the ground in the UK."
+    }
+  }
+}

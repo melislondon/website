@@ -1,0 +1,36 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "kicker": "ODININ B2B MARKETING AND SALES",
+    "title": "B2B growth",
+    "accent": "measured in signed deals",
+    "lead": "Marketing is a revenue process, not brochures and posts. We build a growth system that delivers qualified customers."
+  },
+  "sections": {
+    "funnel": {
+      "title": "From visitor to signed deal",
+      "subtitle": "Revenue engineering built on data, not guesses."
+    },
+    "who": {
+      "title": "Who it is for",
+      "subtitle": "Pick your pain. We find the leak."
+    },
+    "focus": {
+      "title": "Where we focus",
+      "subtitle": "Install the parts that fix your leak."
+    },
+    "gain": {
+      "title": "What you keep",
+      "subtitle": "Every part you install shows up here as a result."
+    },
+    "process": {
+      "title": "No prescription without a diagnosis",
+      "subtitle": "Your diagnosis becomes a six month plan. Press play."
+    },
+    "faq": {
+      "title": "Common questions",
+      "subtitle": "Short answers before we talk."
+    }
+  }
+}

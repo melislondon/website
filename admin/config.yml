@@ -1,0 +1,484 @@
+# Decap CMS configuration for odinin.com
+# Docs: https://decapcms.org/docs/configuration-options/
+backend:
+  name: git-gateway
+  branch: main            # change if your repository uses another branch
+  commit_messages:
+    update: "Update {{collection}} {{slug}}"
+
+# Uncomment to test the editor on your computer with "npx decap-server"
+# local_backend: true
+
+site_url: https://odinin.com
+display_url: https://odinin.com
+logo_url: /images/odinin-mark.svg
+locale: en
+
+media_folder: "images/uploads"     # where uploaded files are stored in the repository
+public_folder: "/images/uploads"   # the path used on the website
+
+collections:
+  - name: settings
+    label: "Site settings"
+    editor: { preview: false }
+    files:
+      - name: general
+        label: "Footer, contact and logo"
+        file: "content/settings.json"
+        fields:
+          - { label: "Company name (footer)", name: name, widget: string }
+          - { label: "Motto (footer)", name: motto, widget: string }
+          - { label: "Location (footer)", name: location, widget: string }
+          - { label: "Contact email", name: email, widget: string, hint: "Shown on the main page and used by the enquiry form." }
+          - { label: "Contact title", name: contact_title, widget: text, hint: "Main page only. Put *stars* around a word to make it italic. A new line starts a new line." }
+          - { label: "Contact text", name: contact_text, widget: text }
+          - { label: "Logo image", name: logo, widget: image, required: false, hint: "Leave empty to keep the animated infinity mark." }
+          - { label: "Social share image", name: share_image, widget: image, required: false, hint: "Shown when a page is shared on LinkedIn, WhatsApp and similar. 1200 x 630 works best." }
+
+  - name: pages
+    label: "Page texts"
+    editor: { preview: false }
+    files:
+      - name: "home"
+        label: "Home page"
+        file: "content/pages/home.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "Growth partner, not an agency"
+                name: "about"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Brand"
+                name: "brand"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Marketing"
+                name: "marketing"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "B2B Meetings"
+                name: "meetings"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Events"
+                name: "events"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Business Development"
+                name: "growth"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+      - name: "brand"
+        label: "Brand page"
+        file: "content/pages/brand.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Small label", name: kicker, widget: string }
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "Your logo, everywhere"
+                name: "applications"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Aligned at the top"
+                name: "vision"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Build your brand"
+                name: "practices"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "How it works"
+                name: "process"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+                  - label: "Steps"
+                    name: steps
+                    widget: list
+                    allow_add: false
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "When", name: when, widget: string }
+                      - { label: "Step name", name: title, widget: string }
+                      - { label: "Description", name: text, widget: string }
+      - name: "marketing"
+        label: "Marketing page"
+        file: "content/pages/marketing.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Small label", name: kicker, widget: string }
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "One campaign, five channels"
+                name: "channels"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Creative built for pivotal moments"
+                name: "deliver"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Commerce is going agentic"
+                name: "agents"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "You have tried to solve this before"
+                name: "tried"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "How it works"
+                name: "process"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+                  - label: "Steps"
+                    name: steps
+                    widget: list
+                    allow_add: false
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "When", name: when, widget: string }
+                      - { label: "Step name", name: title, widget: string }
+                      - { label: "Description", name: text, widget: string }
+      - name: "business-development"
+        label: "Business Development page"
+        file: "content/pages/business-development.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Small label", name: kicker, widget: string }
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "From Türkiye to the UK"
+                name: "pipeline"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "From Bursa to a London shelf"
+                name: "journey"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Why you need a strategic partner"
+                name: "why"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "What we do"
+                name: "deliver"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "A four stage globalisation pathway"
+                name: "process"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+                  - label: "Steps"
+                    name: steps
+                    widget: list
+                    allow_add: false
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "When", name: when, widget: string }
+                      - { label: "Step name", name: title, widget: string }
+                      - { label: "Description", name: text, widget: string }
+              - label: "Your questions, answered"
+                name: "faq"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+      - name: "b2b-growth"
+        label: "B2B Growth page"
+        file: "content/pages/b2b-growth.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Small label", name: kicker, widget: string }
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "From visitor to signed deal"
+                name: "funnel"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Who it is for"
+                name: "who"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Where we focus"
+                name: "focus"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "What you keep"
+                name: "gain"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "No prescription without a diagnosis"
+                name: "process"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Common questions"
+                name: "faq"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+      - name: "events"
+        label: "Events page"
+        file: "content/pages/events.json"
+        fields:
+          - { label: "Browser tab title", name: seo_title, widget: string, required: false }
+          - { label: "Search description", name: seo_description, widget: text, required: false }
+          - label: "Top of page"
+            name: hero
+            widget: object
+            collapsed: false
+            fields:
+              - { label: "Small label", name: kicker, widget: string }
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Headline, coloured part", name: accent, widget: string }
+              - { label: "Intro", name: lead, widget: text }
+          - label: "Sections"
+            name: sections
+            widget: object
+            collapsed: false
+            fields:
+              - label: "Trust is built in the same room"
+                name: "forums"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "B2B meetings"
+                name: "meetings"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "We handle everything"
+                name: "deliver"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Who it is for"
+                name: "who"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Upcoming events"
+                name: "upcoming"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+                  - label: "Call to action box"
+                    name: band
+                    widget: object
+                    fields:
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+              - label: "How it works"
+                name: "process"
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Put *stars* around a word to make it italic and coloured." }
+                  - { label: "Subtitle", name: subtitle, widget: text }
+                  - label: "Steps"
+                    name: steps
+                    widget: list
+                    allow_add: false
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "When", name: when, widget: string }
+                      - { label: "Step name", name: title, widget: string }
+                      - { label: "Description", name: text, widget: string }
+
+  - name: faq
+    label: "Common questions"
+    editor: { preview: false }
+    files:
+      - name: "business-development"
+        label: "Questions on the Business Development page"
+        file: "content/faq/business-development.json"
+        fields:
+          - label: "Questions"
+            name: items
+            widget: list
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Answer", name: answer, widget: text }
+      - name: "b2b-growth"
+        label: "Questions on the B2B Growth page"
+        file: "content/faq/b2b-growth.json"
+        fields:
+          - label: "Questions"
+            name: items
+            widget: list
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Answer", name: answer, widget: text }
+
+  - name: events
+    label: "Event announcements"
+    editor: { preview: false }
+    files:
+      - name: upcoming
+        label: "Upcoming events (Events page)"
+        file: "content/events.json"
+        fields:
+          - label: "Events"
+            name: items
+            widget: list
+            summary: "{{fields.date | date('D MMM YYYY')}}  {{fields.title}}"
+            hint: "Only events marked Published and not yet in the past appear on the site, sorted by date."
+            fields:
+              - { label: "Published", name: published, widget: boolean, default: false }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Date", name: date, widget: datetime, date_format: "D MMM YYYY", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Time", name: time, widget: string, required: false, hint: "For example 18:30 to 21:00" }
+              - { label: "Location", name: location, widget: string, required: false }
+              - { label: "Short description", name: summary, widget: text, required: false }
+              - { label: "Image", name: image, widget: image, required: false }
+              - { label: "Button text", name: button, widget: string, required: false, default: "Register interest" }
+              - { label: "Button link", name: link, widget: string, required: false, hint: "Leave empty to open the enquiry form with Events selected." }

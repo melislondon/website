@@ -1,0 +1,50 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "kicker": "ODININ BRAND",
+    "title": "Brand",
+    "accent": "built for Britain",
+    "lead": "When brand drifts, competitors move in. We build brands that turn complexity into clarity."
+  },
+  "sections": {
+    "applications": {
+      "title": "Your logo, *everywhere*",
+      "subtitle": "On a shop front, a billboard and a magazine cover. One mark people remember."
+    },
+    "vision": {
+      "title": "Aligned at the top",
+      "subtitle": "Tap and watch one vision move through the whole company."
+    },
+    "practices": {
+      "title": "Build your brand",
+      "subtitle": "Eighteen services, all connected. Tap one and follow the light to see what it unlocks."
+    },
+    "process": {
+      "title": "How it works",
+      "subtitle": "Six weeks from first call to launch.",
+      "steps": [
+        {
+          "when": "Week 1",
+          "title": "Discover",
+          "text": "Your market, buyers and competitors."
+        },
+        {
+          "when": "Week 2",
+          "title": "Position",
+          "text": "One clear promise for UK buyers."
+        },
+        {
+          "when": "Weeks 3 to 5",
+          "title": "Design",
+          "text": "Identity, guidelines and sales materials."
+        },
+        {
+          "when": "Week 6",
+          "title": "Launch",
+          "text": "Website, deck and first campaign go live."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "kicker": "ODININ LONDON MARKET ENTRY",
+    "title": "Export value,",
+    "accent": "not containers",
+    "lead": "Product quality gets you in the door. Strategy keeps you there. Market entry for Turkish brands coming to the UK."
+  },
+  "sections": {
+    "pipeline": {
+      "title": "From Türkiye to the UK",
+      "subtitle": "Research, partners and first orders, run by a team on the ground."
+    },
+    "journey": {
+      "title": "From Bursa to a London *shelf*",
+      "subtitle": "One name from the factory floor to the British high street."
+    },
+    "why": {
+      "title": "Why you need a strategic partner",
+      "subtitle": "Four traps stand between Türkiye and the UK. Can you avoid them all?"
+    },
+    "deliver": {
+      "title": "What we do",
+      "subtitle": "Deploy our UK team and watch your presence level up."
+    },
+    "process": {
+      "title": "A four stage globalisation pathway",
+      "subtitle": "From an honest look in the mirror to first orders.",
+      "steps": [
+        {
+          "when": "Stage 1",
+          "title": "Readiness audit",
+          "text": "Capacity, finance and people tested with a VRIO analysis."
+        },
+        {
+          "when": "Stage 2",
+          "title": "Market selection",
+          "text": "Macro data, competitors and culture point to the best return."
+        },
+        {
+          "when": "Stage 3",
+          "title": "Go to market",
+          "text": "Direct sales, distributors or online export."
+        },
+        {
+          "when": "Stage 4",
+          "title": "Launch",
+          "text": "Meetings, representation and first orders in the UK."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Your questions, answered",
+      "subtitle": "Flip each card. How many did you already know?"
+    }
+  }
+}

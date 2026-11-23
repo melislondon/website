@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+# Content edited in the CMS shows up straight away instead of waiting for caches.
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

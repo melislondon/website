@@ -1,5 +1,13 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Odinin Grow Smarter</title><style>html,body{margin:0;background:#0D141F}[hidden]{display:none!important}</style></head><body>
+<html lang="en"><head><meta charset="utf-8"><meta name="odinin-page" content="home"><meta name="description" content="A London sales and marketing consultancy. We help small and growing brands win in the UK with strategy, data and AI."><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Odinin Grow Smarter</title><style>html,body{margin:0;background:#0D141F}[hidden]{display:none!important}</style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function (user) {
+    if (!user) window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
+  });
+}
+</script>
+</head><body>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -781,8 +789,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <canvas id="heroCv" aria-label="Particles forming the words Brand, Marketing, Meetings, Events, Growth and Odinin"></canvas>
     <div class="hero-foot wrap">
       <div>
-        <h1>Grow Smarter <span>with Odinin</span></h1>
-        <p>A London sales and marketing consultancy. We help small and growing brands win in the UK with strategy, data and AI.</p>
+        <h1 data-cms-hero="page.hero">Grow Smarter <span>with Odinin</span></h1>
+        <p data-cms="page.hero.lead">A London sales and marketing consultancy. We help small and growing brands win in the UK with strategy, data and AI.</p>
       </div>
       <div class="words" id="words"></div>
     </div>
@@ -790,7 +798,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene dark about" id="about">
     <div class="wrap">
-      <div class="sh"><h2>Growth partner, not an agency</h2><p>Results, not activity. Slide, tap and see.<br><a class="more" href="b2b-growth.html">B2B Growth page →</a>&nbsp;&nbsp; </p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.about.title">Growth partner, not an agency</h2><p><span data-cms="page.sections.about.subtitle">Results, not activity. Slide, tap and see.</span><br><a class="more" href="b2b-growth.html">B2B Growth page →</a>&nbsp;&nbsp; </p></div>
       <div class="gs" id="gsBox" data-cfg="{&quot;v&quot;: [[80, 70, 60, 50], [70, 85, 75, 85], [75, 82, 88, 60], [90, 60, 70, 55], [70, 78, 55, 65]], &quot;k&quot;: [[0, 1], [1, 2, 3], [1, 2], [0, 3], [0, 2]], &quot;C&quot;: 163.4}">
         <div class="gs-a">
           <div class="gs-top"><span class="gs-kick">Typical result</span><b id="gsN">0%</b></div>
@@ -809,7 +817,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene light" id="brand">
     <div class="wrap">
-      <div class="sh"><h2>Brand</h2><p>From a local name to a brand UK buyers trust.<br><a class="more" href="brand.html">Open the Brand page →</a></p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.brand.title">Brand</h2><p><span data-cms="page.sections.brand.subtitle">From a local name to a brand UK buyers trust.</span><br><a class="more" href="brand.html">Open the Brand page →</a></p></div>
       <div class="stage st-brand" id="brandStage" role="img" aria-label="The Kuzey brand applied in the real world: business card, letterhead and app, a delivery van, a trade fair stand, illuminated signage and branded packaging">
         <div class="slide on idn" data-name="Identity">
         <div class="sheet">
@@ -929,7 +937,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene dark" id="marketing">
     <div class="wrap">
-      <div class="sh"><h2>Marketing</h2><p>Content and campaigns that reach the people who sign orders.<br><a class="more" href="marketing.html">Open the Marketing page →</a></p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.marketing.title">Marketing</h2><p><span data-cms="page.sections.marketing.subtitle">Content and campaigns that reach the people who sign orders.</span><br><a class="more" href="marketing.html">Open the Marketing page →</a></p></div>
       <div class="stage st-mkt" id="mktStage" role="img" aria-label="One campaign running across a website, Instagram, TikTok, Pinterest and YouTube, with leads arriving and reach climbing">
         <svg class="chart" viewBox="0 0 160 100" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
           <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B6CFF" stop-opacity=".35"/><stop offset="1" stop-color="#8B6CFF" stop-opacity="0"/></linearGradient></defs>
@@ -969,7 +977,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene light" id="meetings">
     <div class="wrap">
-      <div class="sh"><h2>B2B Meetings</h2><p>Matched with the right UK buyers. Booked into your week.<br><a class="more" href="events.html">Open the Events page →</a></p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.meetings.title">B2B Meetings</h2><p><span data-cms="page.sections.meetings.subtitle">Matched with the right UK buyers. Booked into your week.</span><br><a class="more" href="events.html">Open the Events page →</a></p></div>
       <div class="stage st-meet" id="meetStage" role="img" aria-label="A B2B meeting room seen from above: clients and UK customers walk in, sit at one to one tables, and customers move to the next table each round">
         <div class="mhud"><b id="mRound">Round 1</b><span id="mTime">10:00</span><span id="mCount">0 meetings</span></div>
         <div class="mleg"><span><i class="ci"></i>Client</span><span><i class="cu2"></i>UK customer</span></div>
@@ -980,7 +988,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene dark" id="events">
     <div class="wrap">
-      <div class="sh"><h2>Events</h2><p>Roundtables, trade fairs and launch nights.<br><a class="more" href="events.html">Open the Events page →</a></p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.events.title">Events</h2><p><span data-cms="page.sections.events.subtitle">Roundtables, trade fairs and launch nights.</span><br><a class="more" href="events.html">Open the Events page →</a></p></div>
       <div class="stage st-ev" id="evStage" role="img" aria-label="A live business forum with a speaker on stage, sweeping spotlights and an audience taking photos">
         <div class="screen"><b>Odinin</b><span>UK Business Forum</span></div>
         <div class="platform"></div>
@@ -1005,7 +1013,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   <section class="scene light" id="growth">
     <div class="wrap">
-      <div class="sh"><h2>Business Development</h2><p>Research, partners and first orders, run on the ground in the UK.<br><a class="more" href="business-development.html">Open the Business Development page →</a></p></div>
+      <div class="sh"><h2 data-cms-rich="page.sections.growth.title">Business Development</h2><p><span data-cms="page.sections.growth.subtitle">Research, partners and first orders, run on the ground in the UK.</span><br><a class="more" href="business-development.html">Open the Business Development page →</a></p></div>
       <div class="stage st-bd" id="bdStage" role="img" aria-label="Routes from Istanbul, Bursa and Izmir to London, Birmingham and Manchester, over a pipeline where UK partners move from prospects to signed">
         <div class="bd-route"><svg id="bdSvg" viewBox="0 0 1000 250" data-dvb="0 0 1000 250" data-mvb="60 0 880 374" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
           <text class="rg" x="205" y="40" text-anchor="middle">TÜRKİYE</text>
@@ -1047,10 +1055,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section class="contact" id="contact">
     <div class="wrap">
       <div>
-        <h2>Ready for<br>the UK?</h2>
-        <p class="lead">Tell us what you make and where you want to sell. We reply within one working day.</p>
+        <h2 data-cms-rich="site.contact_title">Ready for<br>the UK?</h2>
+        <p class="lead" data-cms="site.contact_text">Tell us what you make and where you want to sell. We reply within one working day.</p>
         <div class="cdirect">
-          <span class="mail" id="mail">contact@odinin.com</span>
+          <span class="mail" id="mail" data-cms="site.email">contact@odinin.com</span>
           <div class="crow"><button class="copy" type="button" id="copyMail">Copy email</button></div>
         </div>
       </div>
@@ -1082,14 +1090,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             </fieldset>
             <div class="fld"><label for="f-msg">Tell us about your plans</label><textarea id="f-msg" name="message" required></textarea><span class="err"></span></div>
             <button class="send" type="submit">Prepare my enquiry <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-            <p class="fnote">Your enquiry goes to contact@odinin.com from your own email.</p>
+            <p class="fnote">Your enquiry goes to <span data-cms="site.email">contact@odinin.com</span> from your own email.</p>
           </div>
         </form>
       </div>
     </div>
   </section>
 </main>
-<footer><div class="wrap"><div class="fid"><b>Odinin</b><span>Build Trust. Create Change. Inspire Growth.</span><span>United Kingdom</span></div><nav class="fpages" aria-label="Odinin pages"><a href="brand.html">Brand</a><a href="marketing.html">Marketing</a><a href="business-development.html">Business Development</a><a href="b2b-growth.html">B2B Growth</a><a href="events.html">Events</a></nav></div></footer><style>footer .wrap{align-items:flex-start}.fid{display:grid;gap:6px}.fid b{font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:700;color:#EEF1F6}.fid span{display:block}</style>
+<footer><div class="wrap"><div class="fid"><b data-cms="site.name">Odinin</b><span data-cms="site.motto">Build Trust. Create Change. Inspire Growth.</span><span data-cms="site.location">United Kingdom</span></div><nav class="fpages" aria-label="Odinin pages"><a href="brand.html">Brand</a><a href="marketing.html">Marketing</a><a href="business-development.html">Business Development</a><a href="b2b-growth.html">B2B Growth</a><a href="events.html">Events</a></nav></div></footer><style>footer .wrap{align-items:flex-start}.fid{display:grid;gap:6px}.fid b{font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:700;color:#EEF1F6}.fid span{display:block}</style>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -1804,7 +1812,7 @@ function copyText(text, el, okMsg) {
   const sel = () => { if (!el) return; if (el.select) { el.focus(); el.select(); } else { const r = document.createRange(); r.selectNodeContents(el); const s2 = getSelection(); s2.removeAllRanges(); s2.addRange(r); } toast("Selected, copy it from there"); };
   try { navigator.clipboard.writeText(text).then(() => toast(okMsg), sel); } catch (e) { sel(); }
 }
-$("#copyMail").addEventListener("click", () => copyText("contact@odinin.com", $("#mail"), "Email copied"));
+$("#copyMail").addEventListener("click", () => copyText((window.ODININ_EMAIL || "contact@odinin.com"), $("#mail"), "Email copied"));
 const enq = $("#enq"), cform = $("#cform");
 const esc = t => String(t).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 function setErr(id, msg) { const f = $(id).closest(".fld"); f.classList.toggle("bad", !!msg); f.querySelector(".err").textContent = msg || ""; return !msg; }
@@ -1821,9 +1829,9 @@ enq.addEventListener("submit", e => {
   if (!ok) { const first = enq.querySelector(".fld.bad input,.fld.bad textarea"); if (first) first.focus(); return; }
   const subject = `UK enquiry from ${v("#f-company")}`;
   const body = `Hello Odinin,\n\n${v("#f-msg")}\n\nServices: ${svcs.join(", ")}\nSector: ${v("#f-sector")}\nBased in: ${v("#f-country")}\n\n${v("#f-name")}\n${v("#f-company")}\n${v("#f-email")}${v("#f-phone") ? "\n" + v("#f-phone") : ""}`;
-  const mailto = `mailto:contact@odinin.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  cform.innerHTML = `<div class="done"><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><h3>Your enquiry is ready</h3><p class="fnote">Send it to <b style="color:var(--ink-d)">contact@odinin.com</b>. Open it in your email app, or copy it and paste it into a new email.</p><pre id="enqText">Subject: ${esc(subject)}\n\n${esc(body)}</pre><div class="acts"><a class="p" href="${esc(mailto)}">Open in email</a><button class="g" type="button" id="copyEnq">Copy enquiry</button><button class="g" type="button" id="editEnq">Edit</button></div></div>`;
-  $("#copyEnq").addEventListener("click", () => copyText(`To: contact@odinin.com\nSubject: ${subject}\n\n${body}`, $("#enqText"), "Enquiry copied"));
+  const mailto = `mailto:${window.ODININ_EMAIL || "contact@odinin.com"}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  cform.innerHTML = `<div class="done"><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><h3>Your enquiry is ready</h3><p class="fnote">Send it to <b style="color:var(--ink-d)">${window.ODININ_EMAIL || "contact@odinin.com"}</b>. Open it in your email app, or copy it and paste it into a new email.</p><pre id="enqText">Subject: ${esc(subject)}\n\n${esc(body)}</pre><div class="acts"><a class="p" href="${esc(mailto)}">Open in email</a><button class="g" type="button" id="copyEnq">Copy enquiry</button><button class="g" type="button" id="editEnq">Edit</button></div></div>`;
+  $("#copyEnq").addEventListener("click", () => copyText(`To: ${window.ODININ_EMAIL || "contact@odinin.com"}\nSubject: ${subject}\n\n${body}`, $("#enqText"), "Enquiry copied"));
   $("#editEnq").addEventListener("click", () => { cform.innerHTML = ""; cform.appendChild(enq); });
 });
 
@@ -1835,4 +1843,5 @@ Promise.race([fontReady, new Promise(r => setTimeout(r, 1000))]).then(boot, boot
 })();
 </script>
 
+<script src="/js/cms.js" defer></script>
 </body></html>

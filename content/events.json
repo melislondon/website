@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "published": false,
+      "title": "Example: UK buyers evening",
+      "date": "2027-03-18",
+      "time": "18:30 to 21:00",
+      "location": "London",
+      "summary": "This is a sample entry. Edit it or add your own, then tick Published.",
+      "image": "",
+      "button": "Register interest",
+      "link": ""
+    }
+  ]
+}

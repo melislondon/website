@@ -1,0 +1,54 @@
+{
+  "seo_title": "",
+  "seo_description": "",
+  "hero": {
+    "kicker": "ODININ MARKETING",
+    "title": "Marketing",
+    "accent": "impossible to ignore",
+    "lead": "Nothing matters if your brand is invisible. Campaigns, content and AI that make people stop, listen and buy."
+  },
+  "sections": {
+    "channels": {
+      "title": "One campaign, five channels",
+      "subtitle": "Website, Instagram, TikTok, Pinterest and YouTube, all telling one story."
+    },
+    "deliver": {
+      "title": "Creative built for pivotal moments",
+      "subtitle": "Pick a moment. Watch the campaign build itself."
+    },
+    "agents": {
+      "title": "Commerce is going agentic",
+      "subtitle": "A team of AI agents makes every product discoverable on Google, Meta, ChatGPT and whatever comes next. Built for 10,000+ products, every agent running at once."
+    },
+    "tried": {
+      "title": "You have tried to solve this before",
+      "subtitle": "Pick what you tried, then flip the switch."
+    },
+    "process": {
+      "title": "How it works",
+      "subtitle": "A rhythm that keeps your name in front of buyers.",
+      "steps": [
+        {
+          "when": "Week 1",
+          "title": "Audit",
+          "text": "Where you stand online today."
+        },
+        {
+          "when": "Week 2",
+          "title": "Plan",
+          "text": "Channels, themes and a twelve week calendar."
+        },
+        {
+          "when": "Every week",
+          "title": "Create",
+          "text": "Posts, videos, product content and ads."
+        },
+        {
+          "when": "Every month",
+          "title": "Grow",
+          "text": "Report, learn and adjust."
+        }
+      ]
+    }
+  }
+}
